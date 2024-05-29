@@ -612,6 +612,11 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.my-7{
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
 .me-2{
   margin-inline-end: 0.5rem;
 }
@@ -818,6 +823,14 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-secondary\/50{
+  background-color: rgb(254 254 254 / 0.5);
+}
+
+.bg-secondary\/60{
+  background-color: rgb(254 254 254 / 0.6);
+}
+
 .bg-opacity-100{
   --tw-bg-opacity: 1;
 }
@@ -982,6 +995,10 @@ video {
 
 .font-semibold{
   font-weight: 600;
+}
+
+.font-normal{
+  font-weight: 400;
 }
 
 .text-accent{
