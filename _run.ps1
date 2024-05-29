@@ -1,2 +1,1 @@
-# Run both nodemon and tailwindcss using concurrently
 npx concurrently -k "nodemon app.js" "npx tailwindcss -i ./public/stylesheets/input.css -o ./public/stylesheets/style.css --watch"

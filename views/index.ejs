@@ -5,10 +5,28 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-  <section class="h-full min-h-screen w-full">
-    <div>
+  <%- include('partials/navbar.ejs') %>
+  <section class="relative h-full min-h-screen w-full bg-gradient-to-br from-grad1 to-grad2
+  before:absolute before:h-full before:w-full before:content-['']
+  before:bg-mainBg before:bg-cover before:bg-center before:bg-no-repeat
+  before:blur-3xl before:opacity-[0.04]">
 
+    <div class="relative flex flex-col items-center justify-center h-full w-full py-14 px-6 sm:px-9">
+      <h1 class="text-[2.5rem] text-textPrimary text-center font-semibold"><span class="text-accent">Online</span> Image Compressor</h1>
+      <p class="text-textSecondary text-center font-medium py-3">Compress images with a single click, reduce image size <span class="text-textPrimary underline">without losing image quality.</span></p>
+
+      <div class="select-none w-full sm:max-w-[70%] sm:mx-0 mx-6 bg-secondary/70 my-6 px-6 py-6 rounded-2xl border border-textSecondary border-dashed shadow-mainCard">
+        <form class="flex flex-col items-center justify-center"
+              action="/compress" method="post" enctype="multipart/form-data">
+          <input id="inputImage" type="file" accept="image/jpg, image/jpeg, image/png" name="image" hidden required/>
+          <img class="size-12 mt-5" src="/images/add.svg" alt="Select Image">
+          <button id="btnUpload" class="text-white text-md font-medium mt-8 py-3 px-7 rounded-full bg-gradient-to-br from-accentLight to-accent shadow-primaryButton"><i class="ri-upload-2-line me-2"></i>Upload Image</button>
+          <span class="text-sm text-textSecondary py-3">or drop an image</span>
+        </form>
+      </div>
     </div>
+
   </section>
+  <script type="text/javascript" src="/javascripts/index.js"></script>
   </body>
 </html>
