@@ -2,5 +2,6 @@
 *.iml
 out
 gen
+bin
 node_modules
 .env
