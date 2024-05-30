@@ -11,7 +11,7 @@
     <h1 class="text-[2.5rem] text-textPrimary text-center font-semibold"><span class="text-accent">Online</span> Image Compressor</h1>
     <p class="text-textSecondary text-center font-normal py-3">Compress images with a single click, reduce image size <span class="">without losing image quality.</span></p>
 
-    <div id="drop-area" class="select-none w-full sm:max-w-[70%] sm:mx-0 mx-6 bg-secondary/60 my-7 px-6 py-3 rounded-2xl border border-textSecondary border-dashed shadow-mainCard">
+    <div id="drop-area" class="select-none w-full sm:max-w-[70%] sm:mx-0 mx-6 bg-secondary my-7 px-6 py-3 rounded-2xl border border-textSecondary border-dashed shadow-mainCard">
       <form id="upload-form" class="flex flex-col items-center justify-center py-10"
             action="/compress" method="post" enctype="multipart/form-data">
         <input id="inp-image" type="file" accept="image/jpg, image/jpeg, image/png" name="image" hidden required/>
@@ -24,6 +24,6 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="/javascripts/index.js"></script>
+  <script type="text/javascript" src="/js/home.js"></script>
   </body>
 </html>
