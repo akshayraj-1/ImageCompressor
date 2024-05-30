@@ -1,4 +1,3 @@
-const form = document.querySelector("#upload-form");
 const btnUpload = document.querySelector("#btn-upload");
 const inputImage = document.querySelector("#inp-image");
 const dropArea = document.querySelector("#drop-area");
@@ -53,12 +52,10 @@ inputImage.addEventListener("change", (e) => {
 });
 
 const uploadImage = (file) => {
-    const formData = new FormData(form);
+    const formData = new FormData();
     formData.set("image", file);
-    form.addEventListener("submit", (event) => {
-        event.preventDefault();
-    });
-    fetch(form.action, {
+    console.log(`${window.location.origin}/compress`);
+    fetch(`${window.location.origin}/compress`, {
         method: "POST",
         body: formData
     })
@@ -70,3 +67,4 @@ const uploadImage = (file) => {
             console.error("Image upload failed!", error);
         });
 }
+

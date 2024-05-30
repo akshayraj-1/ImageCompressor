@@ -724,6 +724,10 @@ video {
   max-height: 45vh;
 }
 
+.max-h-\[40vh\]{
+  max-height: 40vh;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
@@ -842,6 +846,16 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-grad1{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 247 255 / var(--tw-bg-opacity));
+}
+
+.bg-grad2{
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 248 255 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-100{
