@@ -1,6 +1,8 @@
 const express = require('express');
-const path = require('path');
 const cookieParser = require('cookie-parser');
+const path = require('path');
+
+const homeRoute = require("./routes/home");
 const PORT = process.env.PORT || 3000;
 
 const app = express();
@@ -13,9 +15,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-    res.render('index');
-});
+// Routes
+app.use("/", homeRoute);
+
+app.use("*", (req, res) => res.render("404"));
+
 
 app.post("/compress", (req, res) => {
     console.log(req.file);
